@@ -9,9 +9,19 @@
     <Window.DataContext>
         <local:EmployeeViewModel />
     </Window.DataContext>
-    
+
     <StackPanel Orientation="Vertical">
-        <Label>Név:</Label>
-        <TextBlock Text="{Binding Name}"/>
+        <StackPanel Orientation="Horizontal">
+            <Label>Név:</Label>
+            <Label Content="{Binding Name}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Adószám:</Label>
+            <Label Content="{Binding TaxNumber}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Felhasználható szabadnapok:</Label>
+            <Label Content="{Binding UnusedDaysOff}"/>
+        </StackPanel>
     </StackPanel>
 </Window>
