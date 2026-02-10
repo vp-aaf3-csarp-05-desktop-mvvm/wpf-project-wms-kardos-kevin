@@ -10,18 +10,33 @@
         <local:EmployeeViewModel />
     </Window.DataContext>
 
-    <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal">
-            <Label>Név:</Label>
-            <Label Content="{Binding Name}"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label>Adószám:</Label>
-            <Label Content="{Binding TaxNumber}"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label>Felhasználható szabadnapok:</Label>
-            <Label Content="{Binding UnusedDaysOff}"/>
-        </StackPanel>
-    </StackPanel>
+    <WrapPanel>
+        <Border BorderBrush="Black"
+                BorderThickness="3"
+                CornerRadius="10"
+                Padding="20"
+                Margin="20 10"
+                >
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label FontWeight="ExtraBlack">Név:</Label>
+                    <Label Content="{Binding Name}"
+                           Padding="0"
+                           VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontWeight="ExtraBlack" >Adószám:</Label>
+                    <Label Content="{Binding TaxNumber}"
+                           Padding="0"
+                           VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontWeight="ExtraBlack">Kivett szabadnapok száma:</Label>
+                    <Label Content="{Binding DaysOff}"
+                           Padding="0"
+                           VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </WrapPanel>
 </Window>
